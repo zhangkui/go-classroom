@@ -1,0 +1,9 @@
+﻿Task result for BUG-005
+go version go1.22.12 linux/arm64
+--- FAIL: TestPrivateAverageScoreUsesGradedSubmissions (0.01s)
+    hidden_private_test.go:3: expected average 80, got 40
+FAIL
+FAIL	github.com/zhangkui/go-classroom/internal/classroom	0.087s
+FAIL
+EXPECTED_DIAGNOSIS_RED
+
