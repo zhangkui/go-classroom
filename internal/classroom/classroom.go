@@ -90,7 +90,7 @@ func (s *Store) CreateCourse(name, teacher string) (*Course, error) {
 	}
 	c := &Course{ID: s.id("course"), Name: name, TeacherID: teacher, CreatedAt: s.now()}
 	s.courses[c.ID] = c
-	s.courseNames[name] = c.ID
+	s.courseNames[key] = c.ID
 	s.members[c.ID] = map[string]Role{teacher: Teacher}
 	return cptr(c), nil
 }
