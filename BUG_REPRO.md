@@ -1,0 +1,1 @@
+﻿# Bug 复现  现象：规范化后相同的课程名被重复创建。  执行： `ash go test -buildvcs=false -count=1 -run "TestCourseNamesAreUniqueAfterNormalization" ./internal/classroom/ ```  带问题基线退出码为 1；对应测试失败信息保存在 cases/BUG-001/data/base-red.txt。
