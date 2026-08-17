@@ -1,0 +1,9 @@
+﻿Task result for BUG-004
+go version go1.22.12 linux/amd64
+--- FAIL: TestPrivateSubmissionAtDeadlineIsRejected (0.00s)
+    hidden_private_test.go:3: expected late error, got <nil>
+FAIL
+FAIL	github.com/zhangkui/go-classroom/internal/classroom	0.003s
+FAIL
+EXPECTED_DIAGNOSIS_RED
+
