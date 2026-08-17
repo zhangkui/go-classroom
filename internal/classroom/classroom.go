@@ -231,7 +231,7 @@ func (s *Store) Submit(ctx context.Context, aid, sid, answer string) (*Submissio
 		return nil, ErrClosed
 	}
 	now := s.now()
-	if now.After(a.Deadline) {
+	if !now.Before(a.Deadline) {
 		return nil, ErrLate
 	}
 	if strings.TrimSpace(answer) == "" {
