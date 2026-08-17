@@ -193,11 +193,6 @@ func (s *Store) CloseAssignment(cid, aid string) error {
 	if !ok || a.CourseID != cid {
 		return ErrNotFound
 	}
-	for _, item := range s.assignments {
-		if item.CourseID == cid {
-			item.Closed = true
-		}
-	}
 	a.Closed = true
 	return nil
 }
