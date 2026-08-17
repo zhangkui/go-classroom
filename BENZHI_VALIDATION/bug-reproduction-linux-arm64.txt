@@ -1,0 +1,7 @@
+﻿Task result for BUG-001
+go version go1.22.12 linux/arm64
+ok  	github.com/zhangkui/go-classroom/internal/classroom	0.114s
+?   	github.com/zhangkui/go-classroom/cmd	[no test files]
+ok  	github.com/zhangkui/go-classroom/internal/classroom	0.103s
+VALIDATION_GREEN
+

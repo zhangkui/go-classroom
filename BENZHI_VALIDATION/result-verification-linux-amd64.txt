@@ -1,0 +1,10 @@
+﻿# linux-amd64 result
+
+image: go-classroom-bug1-candidate
+base: golang:1.22
+docker build: passed
+go version: recorded in run-linux-amd64.txt
+source build: passed
+task verification: green
+answer-material check: passed (.git/private_tests/gold_patch absent)
+full log: run-linux-amd64.txt
