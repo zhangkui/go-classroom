@@ -338,7 +338,7 @@ func (s *Store) Stats(ctx context.Context, cid string) (CourseStats, error) {
 	}
 	avg := 0.0
 	if scored > 0 {
-		avg = total / float64(len(students))
+		avg = total / float64(scored)
 	}
 	return CourseStats{CourseID: cid, SubmissionRate: rate, AverageScore: avg, UnsubmittedStudents: missing, AssignmentCompletion: completion}, nil
 }
