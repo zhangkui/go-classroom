@@ -1,0 +1,1 @@
+﻿# Bug 复现  现象：截止时间恰好相等时提交被错误接受。  执行： `ash go test -buildvcs=false -count=1 -run "TestSubmissionAtDeadlineIsRejected" ./internal/classroom/ ```  带问题基线退出码为 1；对应测试失败信息保存在 cases/BUG-004/data/base-red.txt。
