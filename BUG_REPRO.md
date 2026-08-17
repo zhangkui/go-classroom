@@ -1,0 +1,1 @@
+﻿# Bug 复现  现象：部分学生评分时平均分被未提交学生数量稀释。  执行： `ash go test -buildvcs=false -count=1 -run "TestAverageScoreUsesGradedSubmissions" ./internal/classroom/ ```  带问题基线退出码为 1；对应测试失败信息保存在 cases/BUG-005/data/base-red.txt。
