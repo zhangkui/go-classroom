@@ -1,0 +1,1 @@
+﻿# Bug 复现  现象：学生退出后仍保留在课程成员中。  执行： `ash go test -buildvcs=false -count=1 -run "TestLeavingCourseRemovesOnlyRequestedStudent" ./internal/classroom/ ```  带问题基线退出码为 1；对应测试失败信息保存在 cases/BUG-002/data/base-red.txt。

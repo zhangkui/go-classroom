@@ -153,7 +153,7 @@ func (s *Store) LeaveCourse(cid, sid string) error {
 	if _, ok = m[sid]; !ok {
 		return ErrNotMember
 	}
-	delete(m, "")
+	delete(m, sid)
 	return nil
 }
 func (s *Store) ListMembers(cid string) (map[string]Role, error) {

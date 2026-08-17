@@ -1,0 +1,9 @@
+﻿diff --git a/internal/classroom/membership_leave_private_test.go b/internal/classroom/membership_leave_private_test.go
+new file mode 100644
+index 0000000..6ba8296
+--- /dev/null
++++ b/internal/classroom/membership_leave_private_test.go
+@@ -0,0 +1,3 @@
++﻿package classroom
++import "testing"
++func TestLeavingCourseRemovesOnlyRequestedStudent(t *testing.T){s:=NewStore();c,_:=s.CreateCourse("Math","teacher");_ = s.JoinCourse(c.ID,"alice");_ = s.JoinCourse(c.ID,"bob");if err:=s.LeaveCourse(c.ID,"alice");err!=nil{t.Fatal(err)};m,_:=s.ListMembers(c.ID);if _,ok:=m["alice"];ok{t.Fatal("alice is still a member")};if _,ok:=m["bob"];!ok{t.Fatal("bob was removed")}}
