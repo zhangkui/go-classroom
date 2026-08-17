@@ -1,0 +1,9 @@
+﻿diff --git a/internal/classroom/assignment_close_private_test.go b/internal/classroom/assignment_close_private_test.go
+new file mode 100644
+index 0000000..07da0e9
+--- /dev/null
++++ b/internal/classroom/assignment_close_private_test.go
+@@ -0,0 +1,3 @@
++﻿package classroom
++import("testing";"time")
++func TestClosingOneAssignmentDoesNotCloseAnother(t *testing.T){s:=NewStore();c,_:=s.CreateCourse("Math","teacher");a1,_:=s.CreateAssignment(c.ID,"one",time.Now().Add(time.Hour));a2,_:=s.CreateAssignment(c.ID,"two",time.Now().Add(time.Hour));if err:=s.CloseAssignment(c.ID,a1.ID);err!=nil{t.Fatal(err)};s.mu.RLock();closed2:=s.assignments[a2.ID].Closed;s.mu.RUnlock();if closed2{t.Fatal("unrelated assignment was closed")}}

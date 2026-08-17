@@ -1,0 +1,1 @@
+﻿# Bug 复现  现象：关闭一份作业会同时关闭同课程其他作业。  执行： `ash go test -buildvcs=false -count=1 -run "TestClosingOneAssignmentDoesNotCloseAnother" ./internal/classroom/ ```  带问题基线退出码为 1；对应测试失败信息保存在 cases/BUG-003/data/base-red.txt。
